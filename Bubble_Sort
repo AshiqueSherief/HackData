@@ -1,0 +1,17 @@
+#Optimized bubble sort
+def bubble_sort(lst):
+
+  swapped = True
+  while swapped == True:
+    swapped = False
+    for j in range(len(lst)-1):  
+      
+      if(lst[j]>lst[j+1]):
+        lst[j], lst[j + 1] = lst[j + 1], lst[j] #swap the elements
+        swapped = True
+
+#sort a list
+L = [9, 0, 2, 1, 0, 1, 100, -2, 8, 7, 4, 3, 2]
+
+bubble_sort(L)  
+print("The sorted list is: ", L)
