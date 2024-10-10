@@ -1,0 +1,24 @@
+def merge_sort(nlist, start, end):
+    #sorts the list from indexes start to end - 1 inclusive
+    if end - start > 1:
+        mid = (start + end)//2
+        merge_sort(nlist, start, mid)
+        merge_sort(nlist, mid, end)
+        merge_list(nlist, start, mid, end)
+ 
+def merge_list(nlist, start, mid, end):
+    left = nlist[start:mid]
+    right = nlist[mid:end]
+    k = start
+    i = 0
+    j = 0
+
+
+# Input list
+aList = [1, 74, 96, 5, 42, 63]
+
+merge_sort(aList, 0, len(aList))
+print('Sorted List after Merge Sort, in Ascending Order\n', aList)
+
+aList.reverse()
+print('Sorted List after Merge Sort, in Descending Order\n', aList)
